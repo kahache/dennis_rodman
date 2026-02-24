@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Worm's Career Arc — Rodman Historic Feats</title>
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>" />
+</head>
+<body>
+
+  <!-- ── Sound toggle ── -->
+  <button class="sound-toggle" id="soundToggle" title="Toggle sound">
+    <span class="sound-icon" id="soundIcon">🔊</span>
+  </button>
+
+  <main class="container">
+    <a href="/" class="back-btn">← All Feats</a>
+
+    <div class="page-header">
+      <span class="feat-icon-lg">📊</span>
+      <h1 class="header-title" style="font-size:clamp(2rem,7vw,4rem);">THE WORM'S<br><span>CAREER ARC</span></h1>
+      <p class="header-sub">
+        Rebounds per game across every season of Rodman's career.
+        Hover any point to see exact stats. Championship years glow gold.
+      </p>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- ── Chart ── -->
+    <div class="career-chart-wrapper">
+      <div class="career-chart" id="careerChart">
+        <!-- SVG injected by app.js -->
+      </div>
+      <!-- Tooltip -->
+      <div class="chart-tooltip" id="chartTooltip"></div>
+    </div>
+
+    <!-- ── Season cards ── -->
+    <div class="season-cards" id="seasonCards">
+      <!-- Injected by app.js -->
+    </div>
+
+    <!-- ── Legend ── -->
+    <div class="timeline-legend" style="margin-top:1.5rem;">
+      <span class="legend-item"><span class="legend-dot legend-dot-title"></span>Rebounding Title</span>
+      <span class="legend-item"><span class="legend-dot legend-dot-champ"></span>NBA Champion</span>
+      <span class="legend-item"><span class="legend-dot legend-dot-peak" style="background:var(--red);"></span>Regular season</span>
+    </div>
+  </main>
+
+  <!-- ── Footer ── -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p class="footer-copy">
+        🄯 Copyleft 2025
+        <a href="https://github.com/kahache" target="_blank" rel="noopener" class="footer-link">kahache</a>
+        — Free to use, share, and remix under
+        <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener" class="footer-link">CC BY-SA 4.0</a>
+      </p>
+      <p class="footer-stats">Stats: Basketball-Reference ✦ Built with AI assistance</p>
+    </div>
+  </footer>
+
+  <script src="/app.js"></script>
+</body>
+</html>

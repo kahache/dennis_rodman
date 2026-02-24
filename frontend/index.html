@@ -23,14 +23,20 @@
         The numbers behind the most electrifying, chaotic, and unstoppable force the NBA has ever seen.
       </p>
 
-      <!-- ── Real Rodman photos — CC0 via Wikimedia Commons ── -->
+      <!--
+      ╔══════════════════════════════════════════════════════════════╗
+      ║  REAL PHOTOS — CC0 Public Domain via Wikimedia Commons       ║
+      ║  Uncomment the block below to enable real Rodman photos.     ║
+      ║  Remove or comment out the EMOJI STRIP block below that.     ║
+      ╚══════════════════════════════════════════════════════════════╝
+
       <div class="rodman-strip">
         <div class="photo-wrapper">
           <img
             class="rodman-photo"
             src="https://commons.wikimedia.org/wiki/Special:FilePath/Politicon_2018_(31728960018).jpg"
             alt="Dennis Rodman at Politicon 2018"
-            title="Dennis Rodman — Politicon 2018 (CC0)"
+            title="CC0 Public Domain — Politicon 2018 via Wikimedia Commons"
             loading="lazy"
             onerror="this.parentElement.innerHTML='<div class=\'rodman-photo-placeholder\'>🏀</div>'"
           />
@@ -40,7 +46,7 @@
             class="rodman-photo"
             src="https://commons.wikimedia.org/wiki/Special:FilePath/Politicon_2018_(31728973098).jpg"
             alt="Dennis Rodman at Politicon 2018"
-            title="Dennis Rodman — Politicon 2018 (CC0)"
+            title="CC0 Public Domain — Politicon 2018 via Wikimedia Commons"
             loading="lazy"
             onerror="this.parentElement.innerHTML='<div class=\'rodman-photo-placeholder\'>🐛</div>'"
           />
@@ -50,13 +56,21 @@
             class="rodman-photo"
             src="https://commons.wikimedia.org/wiki/Special:FilePath/Politicon_2018_(31728981508).jpg"
             alt="Dennis Rodman at Politicon 2018"
-            title="Dennis Rodman — Politicon 2018 (CC0)"
+            title="CC0 Public Domain — Politicon 2018 via Wikimedia Commons"
             loading="lazy"
             onerror="this.parentElement.innerHTML='<div class=\'rodman-photo-placeholder\'>🐂</div>'"
           />
         </div>
       </div>
       <p class="photo-credit">Photos: Politicon 2018 — CC0 Public Domain via Wikimedia Commons</p>
+      -->
+
+      <!-- ── EMOJI STRIP — Remove this block when enabling real photos above ── -->
+      <div class="rodman-strip">
+        <div class="rodman-photo-placeholder" title="Dennis Rodman #91">🏀</div>
+        <div class="rodman-photo-placeholder" title="Dennis Rodman — The Worm">🐛</div>
+        <div class="rodman-photo-placeholder" title="Dennis Rodman — Chicago Bulls">🐂</div>
+      </div>
 
       <div class="divider"></div>
 
@@ -72,6 +86,26 @@
     <div class="feats-grid" id="featsGrid">
       <!-- Cards injected by app.js -->
     </div>
+
+    <!-- ── Deep Dive section ── -->
+    <div class="deep-dive-section">
+      <h2 class="deep-dive-title">DEEP DIVES</h2>
+      <p class="deep-dive-sub">Go beyond the rankings</p>
+      <div class="deep-dive-grid">
+        <a href="/career" class="deep-dive-card">
+          <span class="deep-dive-icon">📊</span>
+          <div class="deep-dive-name">The Worm's Career Arc</div>
+          <div class="deep-dive-desc">RPG by season across all teams, with championship years highlighted</div>
+          <span class="feat-arrow">→</span>
+        </a>
+        <a href="/timeline" class="deep-dive-card">
+          <span class="deep-dive-icon">🏆</span>
+          <div class="deep-dive-name">7 Years of Domination</div>
+          <div class="deep-dive-desc">Rodman's consecutive rebounding title streak — animated year by year</div>
+          <span class="feat-arrow">→</span>
+        </a>
+      </div>
+    </div>
   </main>
 
   <!-- ── Loading overlay ── -->
@@ -82,7 +116,15 @@
 
   <!-- ── Footer ── -->
   <footer class="site-footer">
-    <p>Rodman Historic Feats ✦ Built as an AI dev demo ✦ Stats: <span>nba_api</span> + Basketball-Reference</p>
+    <div class="footer-content">
+      <p class="footer-copy">
+        🄯 Copyleft 2025
+        <a href="https://github.com/kahache" target="_blank" rel="noopener" class="footer-link">kahache</a>
+        — Free to use, share, and remix under
+        <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener" class="footer-link">CC BY-SA 4.0</a>
+      </p>
+      <p class="footer-stats">Stats: <span>nba_api</span> + Basketball-Reference ✦ Built with AI assistance</p>
+    </div>
   </footer>
 
   <script src="/app.js"></script>

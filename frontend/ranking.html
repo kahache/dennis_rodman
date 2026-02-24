@@ -33,6 +33,9 @@
     <!-- ── Ranking list ── -->
     <div class="ranking-list" id="rankingList"></div>
 
+    <!-- ── Did You Know panel (injected by JS) ── -->
+    <div class="dyk-panel" id="dykPanel" style="display:none;"></div>
+
     <!-- ── Error state ── -->
     <div class="error-state" id="errorState" style="display:none;">
       <div class="error-icon">⚠️</div>
@@ -43,9 +46,24 @@
     </div>
   </main>
 
+  <!-- ── Head-to-Head drawer (slides in from right) ── -->
+  <div class="h2h-overlay" id="h2hOverlay"></div>
+  <aside class="h2h-drawer" id="h2hDrawer">
+    <button class="h2h-close" id="h2hClose">✕</button>
+    <div class="h2h-content" id="h2hContent"></div>
+  </aside>
+
   <!-- ── Footer ── -->
   <footer class="site-footer">
-    <p>Rodman Historic Feats ✦ Built as an AI dev demo ✦ Stats: <span>nba_api</span> + Basketball-Reference</p>
+    <div class="footer-content">
+      <p class="footer-copy">
+        🄯 Copyleft 2025
+        <a href="https://github.com/kahache" target="_blank" rel="noopener" class="footer-link">kahache</a>
+        — Free to use, share, and remix under
+        <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener" class="footer-link">CC BY-SA 4.0</a>
+      </p>
+      <p class="footer-stats">Stats: <span>nba_api</span> + Basketball-Reference ✦ Built with AI assistance</p>
+    </div>
   </footer>
 
   <script src="/app.js"></script>

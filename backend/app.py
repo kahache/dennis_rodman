@@ -48,6 +48,14 @@ print(f"[startup] index.html   : {os.path.isfile(os.path.join(FRONTEND_DIR, 'ind
 def serve_index():
     return FileResponse(os.path.join(FRONTEND_DIR, "index.html"))
 
+@app.get("/timeline", include_in_schema=False)
+def serve_timeline():
+    return FileResponse(os.path.join(FRONTEND_DIR, "timeline.html"))
+
+@app.get("/career", include_in_schema=False)
+def serve_career():
+    return FileResponse(os.path.join(FRONTEND_DIR, "career.html"))
+
 @app.get("/ranking", include_in_schema=False)
 def serve_ranking():
     return FileResponse(os.path.join(FRONTEND_DIR, "ranking.html"))
