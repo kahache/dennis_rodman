@@ -1,0 +1,15 @@
+{
+  "_source": "Basketball-Reference — Single season offensive rebounds leaders, post-1980",
+  "ranking": [
+    { "player": "Dennis Rodman",   "team": "DET", "value": 523, "is_rodman": true,  "season": "1991–92" },
+    { "player": "Moses Malone",    "team": "HOU", "value": 587, "is_rodman": false, "season": "1981–82" },
+    { "player": "Dennis Rodman",   "team": "SAS", "value": 471, "is_rodman": true,  "season": "1994–95" },
+    { "player": "Dennis Rodman",   "team": "CHI", "value": 456, "is_rodman": true,  "season": "1995–96" },
+    { "player": "Charles Barkley", "team": "PHI", "value": 430, "is_rodman": false, "season": "1986–87" },
+    { "player": "Moses Malone",    "team": "PHI", "value": 445, "is_rodman": false, "season": "1982–83" },
+    { "player": "Hakeem Olajuwon", "team": "HOU", "value": 384, "is_rodman": false, "season": "1989–90" },
+    { "player": "Buck Williams",   "team": "NJN", "value": 373, "is_rodman": false, "season": "1981–82" },
+    { "player": "Dwight Howard",   "team": "ORL", "value": 366, "is_rodman": false, "season": "2007–08" },
+    { "player": "Kevin Willis",    "team": "ATL", "value": 359, "is_rodman": false, "season": "1991–92" }
+  ]
+}

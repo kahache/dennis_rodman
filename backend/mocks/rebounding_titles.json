@@ -1,0 +1,16 @@
+{
+  "_source": "Basketball-Reference — NBA rebounding title history",
+  "_note": "Modern era defined as post-1973 (ABA merger). Wilt won 11 but played 1959-1973.",
+  "ranking": [
+    { "player": "Dennis Rodman",     "team": "CHI / DET / SAS", "value": 7,  "is_rodman": true,  "seasons": "1991–92 through 1997–98" },
+    { "player": "Moses Malone",      "team": "HOU / PHI",       "value": 4,  "is_rodman": false, "seasons": "1979, 1982–83, 1985" },
+    { "player": "Kevin Willis",      "team": "ATL",             "value": 1,  "is_rodman": false, "seasons": "1991–92 (tied)" },
+    { "player": "Hakeem Olajuwon",   "team": "HOU",             "value": 1,  "is_rodman": false, "seasons": "1989–90" },
+    { "player": "Charles Barkley",   "team": "PHI",             "value": 1,  "is_rodman": false, "seasons": "1986–87" },
+    { "player": "Bill Laimbeer",     "team": "DET",             "value": 1,  "is_rodman": false, "seasons": "1985–86" },
+    { "player": "Buck Williams",     "team": "NJN",             "value": 1,  "is_rodman": false, "seasons": "1982–83 (tied)" },
+    { "player": "David Robinson",    "team": "SAS",             "value": 1,  "is_rodman": false, "seasons": "1990–91" },
+    { "player": "Dikembe Mutombo",   "team": "DEN",             "value": 1,  "is_rodman": false, "seasons": "1993–94 (shared)" },
+    { "player": "Kevin Garnett",     "team": "MIN",             "value": 1,  "is_rodman": false, "seasons": "2003–04" }
+  ]
+}

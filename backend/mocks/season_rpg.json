@@ -1,0 +1,16 @@
+{
+  "_source": "Basketball-Reference — Single season RPG leaders, post-1980 regular season",
+  "_note": "Wilt Chamberlain's 27.2 RPG (1960–61) excluded as pre-modern era.",
+  "ranking": [
+    { "player": "Dennis Rodman",   "team": "DET", "value": 18.7, "is_rodman": true,  "season": "1991–92" },
+    { "player": "Dennis Rodman",   "team": "SAS", "value": 17.3, "is_rodman": true,  "season": "1993–94" },
+    { "player": "Dennis Rodman",   "team": "SAS", "value": 16.8, "is_rodman": true,  "season": "1994–95" },
+    { "player": "Moses Malone",    "team": "HOU", "value": 14.8, "is_rodman": false, "season": "1982–83" },
+    { "player": "Dennis Rodman",   "team": "CHI", "value": 14.9, "is_rodman": true,  "season": "1995–96" },
+    { "player": "Moses Malone",    "team": "HOU", "value": 14.7, "is_rodman": false, "season": "1981–82" },
+    { "player": "Charles Barkley", "team": "PHI", "value": 14.6, "is_rodman": false, "season": "1986–87" },
+    { "player": "Hakeem Olajuwon", "team": "HOU", "value": 14.0, "is_rodman": false, "season": "1989–90" },
+    { "player": "Kevin Garnett",   "team": "MIN", "value": 13.9, "is_rodman": false, "season": "2003–04" },
+    { "player": "Dwight Howard",   "team": "ORL", "value": 13.8, "is_rodman": false, "season": "2009–10" }
+  ]
+}

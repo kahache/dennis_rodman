@@ -1,0 +1,16 @@
+{
+  "_source": "Mock / entertainment data — composite chaos metric",
+  "_note": "Weighted index: technical fouls (1pt) + flagrant fouls (2pt) + ejections (5pt). For entertainment only.",
+  "ranking": [
+    { "player": "Dennis Rodman",   "team": "CHI / DET / SAS", "value": 312, "is_rodman": true,  "techs": 212, "flagrants": 23, "ejections": 9 },
+    { "player": "Rasheed Wallace", "team": "DET / POR",       "value": 289, "is_rodman": false, "techs": 317, "flagrants": 15, "ejections": 8 },
+    { "player": "Charles Barkley", "team": "PHX / PHI",       "value": 241, "is_rodman": false, "techs": 163, "flagrants": 19, "ejections": 9 },
+    { "player": "Bill Laimbeer",   "team": "DET",             "value": 198, "is_rodman": false, "techs": 121, "flagrants": 22, "ejections": 7 },
+    { "player": "Karl Malone",     "team": "UTA",             "value": 187, "is_rodman": false, "techs": 132, "flagrants": 18, "ejections": 5 },
+    { "player": "Rick Mahorn",     "team": "DET / NJN",       "value": 175, "is_rodman": false, "techs": 98,  "flagrants": 25, "ejections": 6 },
+    { "player": "Vernon Maxwell",  "team": "HOU",             "value": 164, "is_rodman": false, "techs": 118, "flagrants": 10, "ejections": 8 },
+    { "player": "Gary Payton",     "team": "SEA",             "value": 152, "is_rodman": false, "techs": 139, "flagrants": 4,  "ejections": 5 },
+    { "player": "Patrick Ewing",   "team": "NYK",             "value": 141, "is_rodman": false, "techs": 108, "flagrants": 8,  "ejections": 5 },
+    { "player": "Anthony Mason",   "team": "NYK",             "value": 133, "is_rodman": false, "techs": 95,  "flagrants": 12, "ejections": 4 }
+  ]
+}

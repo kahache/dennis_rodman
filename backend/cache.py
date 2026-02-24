@@ -1,5 +1,5 @@
 """
-Simple in-memory cache with TTL (time-to-live).
+cache.py — Simple in-memory TTL cache.
 Avoids hammering stats.nba.com on repeated requests.
 """
 
@@ -30,7 +30,7 @@ def set(key: str, value: Any, ttl: int = DEFAULT_TTL) -> None:
 
 
 def clear() -> None:
-    """Wipe the entire cache (useful for testing)."""
+    """Wipe the entire cache. Used in tests and diagnostics."""
     _store.clear()
 
 
@@ -40,4 +40,5 @@ def stats() -> dict:
     return {
         "total_keys": len(_store),
         "live_keys": sum(1 for e in _store.values() if e["expires_at"] > now),
+        "expired_keys": sum(1 for e in _store.values() if e["expires_at"] <= now),
     }

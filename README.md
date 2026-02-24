@@ -1,18 +1,6 @@
-# 🐛 Rodman Historic Feats
+# 🐛 Rodman Historic Feats — v2
 
-A tribute app for Dennis Rodman — browse all-time NBA rankings and find out where **The Worm** stands in basketball history.
-
-Built as an AI-assisted full-stack development demo using **FastAPI + nba_api + vanilla HTML/CSS/JS**.
-
----
-
-## Stack
-
-| Layer    | Technology                                      |
-|----------|-------------------------------------------------|
-| Backend  | Python 3.9+, FastAPI, Uvicorn                   |
-| NBA Data | `nba_api` (live) with JSON mock fallback        |
-| Frontend | HTML + CSS + Vanilla JS (no build step needed)  |
+A tribute app for Dennis Rodman. Every feat shown is one where **The Worm ranks #1**.
 
 ---
 
@@ -21,18 +9,29 @@ Built as an AI-assisted full-stack development demo using **FastAPI + nba_api + 
 ```
 rodman-historic-feats/
 ├── backend/
-│   ├── app.py            # FastAPI app, routes, static file serving
-│   ├── feats.py          # Feat catalog (metadata + query strategy)
-│   ├── nba_client.py     # nba_api live queries + mock fallback logic
-│   ├── cache.py          # In-memory TTL cache
+│   ├── app.py                        # FastAPI app + static file serving
+│   ├── feats.py                      # Feat catalog (5 feats, all Rodman #1)
+│   ├── nba_client.py                 # nba_api live queries + mock fallback
+│   ├── cache.py                      # In-memory TTL cache (10 min)
 │   ├── requirements.txt
-│   └── mocks/            # Fallback JSON data (one file per feat)
+│   └── mocks/
+│       ├── rebounding_titles.json
+│       ├── season_rpg.json
+│       ├── offensive_rebounds_season.json
+│       ├── consecutive_titles.json
+│       └── chaos_index.json
 ├── frontend/
-│   ├── index.html        # Feat selection page
-│   ├── ranking.html      # Ranking results page
+│   ├── index.html
+│   ├── ranking.html
 │   ├── style.css
 │   └── app.js
-├── test_mock_fallback.py # pytest suite
+├── tests/
+│   ├── __init__.py                   # sys.path bootstrap
+│   ├── test_cache.py                 # 17 tests — cache set/get/TTL/clear/stats
+│   ├── test_feats.py                 # 16 tests — catalog shape, contracts
+│   ├── test_nba_client.py            # 22 tests — mocks, normalise, fallback, Rodman #1
+│   └── test_api.py                   # 24 tests — endpoints, caching, rankings
+├── pytest.ini
 └── README.md
 ```
 
@@ -40,77 +39,40 @@ rodman-historic-feats/
 
 ## Quick Start
 
-### 1. Install dependencies
-
 ```bash
-cd backend
-pip install -r requirements.txt
-```
+# 1 — Install dependencies
+cd backend && pip install -r requirements.txt
 
-### 2. Start the backend
-
-```bash
+# 2 — Start the server (from inside backend/)
 uvicorn app:app --port 8000 --reload
+
+# 3 — Open the app
+open http://localhost:8000
 ```
 
-### 3. Open the app
-
-Visit **http://localhost:8000** in your browser.
-
-The backend serves the frontend at the root URL — no separate web server needed.
-
 ---
 
-## Available Feats (v1)
-
-| ID                | Title                          | Data Source      |
-|-------------------|-------------------------------|------------------|
-| `rebounds`        | All-Time Rebounds Leaders      | nba_api → mock   |
-| `defensive_teams` | All-Defensive Team Selections  | Mock             |
-| `championships`   | Most Championship Rings        | Mock             |
-| `steals`          | All-Time Steals Leaders        | nba_api → mock   |
-| `intensity`       | The Chaos Leaderboard          | Mock (flavour)   |
-
-> **Live vs Mock:** `nba_api` queries stats.nba.com in real time. If the request fails (timeout, rate-limit, API change), the app automatically falls back to the local mock JSON. A small badge on the ranking page tells you which source was used.
-
----
-
-## API Endpoints
-
-Once running, interactive docs are available at **http://localhost:8000/docs**.
-
-| Method | Path                             | Description                     |
-|--------|----------------------------------|---------------------------------|
-| GET    | `/api/feats`                     | List all feats                  |
-| GET    | `/api/feats/{feat_id}`           | Get a single feat's metadata    |
-| GET    | `/api/feats/{feat_id}/ranking`   | Get the top-10 ranking          |
-| GET    | `/api/health`                    | Health check                    |
-
----
-
-## Running Tests
-
-From the project root:
+## Run Tests
 
 ```bash
-pip install pytest httpx
-pytest test_mock_fallback.py -v
-```
+# From the project root
+pip install pytest pytest-cov
+pytest
 
-Tests cover:
-- All mock JSON files are valid and well-shaped
-- `nba_client` falls back to mock when the live fetcher raises
-- Mock-strategy feats never attempt a live fetch
-- `rank` fields are correctly injected
-- Cache set/get/expiry/clear behaviour
-- FastAPI endpoint smoke tests (200s, 404s, correct shapes)
+# With coverage report
+pytest --cov=backend --cov-report=term-missing
+```
 
 ---
 
-## Notes
+## The 5 Feats (all Rodman #1)
 
-- **stats.nba.com can be slow or flaky.** The backend has a built-in fallback — the app always works even if the NBA API is down.
-- **No database.** Results are cached in memory for 10 minutes, then re-fetched.
-- **No authentication required** for v1 local development.
-- Photos in the header are placeholder emojis for v1. Replace `rodman-photo-placeholder` divs in `index.html` with `<img>` tags pointing to public domain images from Wikimedia Commons if desired.
-# dennis_rodman
+| Feat | Rodman's Record | Data |
+|------|----------------|------|
+| Most Rebounding Titles (modern era) | 7 titles | Mock |
+| Highest Single-Season RPG (post-1980) | 18.7 RPG in 1991–92 | nba_api → mock |
+| Most Offensive Rebounds in a Season (post-1980) | 523 in 1991–92 | nba_api → mock |
+| Most Consecutive Rebounding Titles | 7 straight (1991–98) | Mock |
+| The Worm's Chaos Index | 312 chaos points | Mock |
+
+> **Live vs Mock:** Feats marked `nba_api → mock` attempt a real query to stats.nba.com first. On failure (timeout, rate-limit, etc.) the app falls back silently to local JSON. A badge on the ranking page shows which source was used.

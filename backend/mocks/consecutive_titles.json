@@ -1,0 +1,15 @@
+{
+  "_source": "Basketball-Reference — Consecutive rebounding title streaks, all-time",
+  "ranking": [
+    { "player": "Dennis Rodman",   "team": "DET / SAS / CHI", "value": 7, "is_rodman": true,  "seasons": "1991–92 to 1997–98" },
+    { "player": "Wilt Chamberlain","team": "PHI / SF",        "value": 7, "is_rodman": false, "seasons": "1959–60 to 1965–66" },
+    { "player": "Moses Malone",    "team": "HOU",             "value": 3, "is_rodman": false, "seasons": "1981–82 to 1983–84" },
+    { "player": "Dwight Howard",   "team": "ORL",             "value": 3, "is_rodman": false, "seasons": "2007–08 to 2009–10" },
+    { "player": "Bob Pettit",      "team": "STL",             "value": 2, "is_rodman": false, "seasons": "1955–56 to 1956–57" },
+    { "player": "Charles Barkley", "team": "PHI",             "value": 1, "is_rodman": false, "seasons": "1986–87" },
+    { "player": "Hakeem Olajuwon", "team": "HOU",             "value": 1, "is_rodman": false, "seasons": "1989–90" },
+    { "player": "Kevin Garnett",   "team": "MIN",             "value": 1, "is_rodman": false, "seasons": "2003–04" },
+    { "player": "Andre Drummond",  "team": "DET",             "value": 1, "is_rodman": false, "seasons": "2017–18" },
+    { "player": "Rudy Gobert",     "team": "UTA",             "value": 1, "is_rodman": false, "seasons": "2020–21" }
+  ]
+}
