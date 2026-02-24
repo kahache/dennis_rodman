@@ -9,6 +9,11 @@
 </head>
 <body>
 
+  <!-- ── Sound toggle ── -->
+  <button class="sound-toggle" id="soundToggle" title="Toggle sound">
+    <span class="sound-icon" id="soundIcon">🔊</span>
+  </button>
+
   <!-- ── Header ── -->
   <header class="site-header">
     <div class="container">
@@ -18,12 +23,40 @@
         The numbers behind the most electrifying, chaotic, and unstoppable force the NBA has ever seen.
       </p>
 
-      <!-- Photo strip (public domain / placeholder) -->
+      <!-- ── Real Rodman photos — CC0 via Wikimedia Commons ── -->
       <div class="rodman-strip">
-        <div class="rodman-photo-placeholder" title="Dennis Rodman #91">🏀</div>
-        <div class="rodman-photo-placeholder" title="Dennis Rodman — The Worm">🐛</div>
-        <div class="rodman-photo-placeholder" title="Dennis Rodman — Chicago Bulls">🐂</div>
+        <div class="photo-wrapper">
+          <img
+            class="rodman-photo"
+            src="https://commons.wikimedia.org/wiki/Special:FilePath/Politicon_2018_(31728960018).jpg"
+            alt="Dennis Rodman at Politicon 2018"
+            title="Dennis Rodman — Politicon 2018 (CC0)"
+            loading="lazy"
+            onerror="this.parentElement.innerHTML='<div class=\'rodman-photo-placeholder\'>🏀</div>'"
+          />
+        </div>
+        <div class="photo-wrapper">
+          <img
+            class="rodman-photo"
+            src="https://commons.wikimedia.org/wiki/Special:FilePath/Politicon_2018_(31728973098).jpg"
+            alt="Dennis Rodman at Politicon 2018"
+            title="Dennis Rodman — Politicon 2018 (CC0)"
+            loading="lazy"
+            onerror="this.parentElement.innerHTML='<div class=\'rodman-photo-placeholder\'>🐛</div>'"
+          />
+        </div>
+        <div class="photo-wrapper">
+          <img
+            class="rodman-photo"
+            src="https://commons.wikimedia.org/wiki/Special:FilePath/Politicon_2018_(31728981508).jpg"
+            alt="Dennis Rodman at Politicon 2018"
+            title="Dennis Rodman — Politicon 2018 (CC0)"
+            loading="lazy"
+            onerror="this.parentElement.innerHTML='<div class=\'rodman-photo-placeholder\'>🐂</div>'"
+          />
+        </div>
       </div>
+      <p class="photo-credit">Photos: Politicon 2018 — CC0 Public Domain via Wikimedia Commons</p>
 
       <div class="divider"></div>
 

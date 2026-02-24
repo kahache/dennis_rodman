@@ -9,6 +9,11 @@
 </head>
 <body>
 
+  <!-- ── Sound toggle ── -->
+  <button class="sound-toggle" id="soundToggle" title="Toggle sound">
+    <span class="sound-icon" id="soundIcon">🔊</span>
+  </button>
+
   <!-- ── Loading overlay ── -->
   <div class="loading-overlay" id="loadingOverlay">
     <div class="spinner"></div>
@@ -20,17 +25,13 @@
     <a href="/" class="back-btn" id="backBtn">← All Feats</a>
 
     <!-- ── Ranking header (populated by JS) ── -->
-    <div class="ranking-header" id="rankingHeader">
-      <!-- Injected by app.js -->
-    </div>
+    <div class="ranking-header" id="rankingHeader"></div>
 
     <!-- ── Divider ── -->
     <div class="divider"></div>
 
     <!-- ── Ranking list ── -->
-    <div class="ranking-list" id="rankingList">
-      <!-- Injected by app.js -->
-    </div>
+    <div class="ranking-list" id="rankingList"></div>
 
     <!-- ── Error state ── -->
     <div class="error-state" id="errorState" style="display:none;">
