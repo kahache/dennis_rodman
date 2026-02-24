@@ -1,0 +1,549 @@
+/* ============================================================
+   RODMAN HISTORIC FEATS — Global Stylesheet
+   Aesthetic: Dark arena / Chicago Bulls / brutalist sports
+   Fonts: Bebas Neue (display) + DM Mono (data) + Inter Tight (body)
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@400;500&family=Inter+Tight:wght@400;500;600;700&display=swap');
+
+/* ── CSS Variables ── */
+:root {
+  --red:         #CE1141;
+  --red-dark:    #9a0d2e;
+  --red-glow:    rgba(206, 17, 65, 0.35);
+  --gold:        #FFB81C;
+  --gold-glow:   rgba(255, 184, 28, 0.4);
+  --black:       #0a0a0a;
+  --surface:     #111111;
+  --surface-2:   #1a1a1a;
+  --surface-3:   #222222;
+  --border:      rgba(255,255,255,0.07);
+  --text:        #f0f0f0;
+  --text-muted:  #888;
+  --worm-badge:  #00ff9d;
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-body:    'Inter Tight', sans-serif;
+  --font-mono:    'DM Mono', monospace;
+}
+
+/* ── Reset ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background-color: var(--black);
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(206,17,65,0.15) 0%, transparent 60%),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 39px,
+      rgba(255,255,255,0.02) 39px,
+      rgba(255,255,255,0.02) 40px
+    );
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+/* ── Typography ── */
+h1, h2, h3 { font-family: var(--font-display); letter-spacing: 0.03em; line-height: 1; }
+code, .mono { font-family: var(--font-mono); }
+
+/* ── Layout container ── */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+.site-header {
+  position: relative;
+  padding: 3rem 0 2rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.site-header::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background:
+    linear-gradient(180deg, rgba(206,17,65,0.08) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+.header-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  color: var(--red);
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  opacity: 0;
+  animation: fadeUp 0.5s ease forwards 0.1s;
+}
+
+.header-title {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 10vw, 6.5rem);
+  color: var(--text);
+  text-shadow: 0 0 60px var(--red-glow), 0 2px 0 rgba(0,0,0,0.8);
+  opacity: 0;
+  animation: fadeUp 0.6s ease forwards 0.2s;
+}
+
+.header-title span {
+  color: var(--red);
+}
+
+.header-sub {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin-top: 0.75rem;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0;
+  animation: fadeUp 0.6s ease forwards 0.35s;
+}
+
+/* ── Rodman image strip ── */
+.rodman-strip {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0 1rem;
+  opacity: 0;
+  animation: fadeUp 0.7s ease forwards 0.5s;
+}
+
+.rodman-photo {
+  width: 120px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 4px;
+  filter: grayscale(20%) contrast(1.1);
+  border: 2px solid var(--border);
+  box-shadow: 0 0 20px var(--red-glow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.rodman-photo:hover {
+  transform: scale(1.06) rotate(-1deg);
+  box-shadow: 0 0 40px var(--red-glow);
+}
+.rodman-photo-placeholder {
+  width: 120px;
+  height: 160px;
+  border-radius: 4px;
+  background: var(--surface-2);
+  border: 2px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  box-shadow: 0 0 20px var(--red-glow);
+}
+
+/* ── Red divider ── */
+.divider {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--red), var(--gold), var(--red), transparent);
+  margin: 0.5rem auto 2.5rem;
+  max-width: 600px;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards 0.7s;
+}
+
+/* ============================================================
+   FEAT CARDS (index page)
+   ============================================================ */
+.feats-intro {
+  text-align: center;
+  margin-bottom: 2rem;
+  opacity: 0;
+  animation: fadeUp 0.5s ease forwards 0.8s;
+}
+.feats-intro h2 {
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  margin-bottom: 0.4rem;
+}
+.feats-intro p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.feats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+  padding-bottom: 3rem;
+}
+
+.feat-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.5rem;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  opacity: 0;
+  animation: fadeUp 0.5s ease forwards;
+}
+
+.feat-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--red-glow) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.feat-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--red);
+  box-shadow: 0 8px 32px var(--red-glow);
+}
+.feat-card:hover::before { opacity: 1; }
+
+.feat-card:active { transform: translateY(-2px) scale(0.99); }
+
+.feat-icon {
+  font-size: 2.2rem;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.feat-title {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  color: var(--text);
+  margin-bottom: 0.25rem;
+}
+
+.feat-subtitle {
+  font-size: 0.8rem;
+  color: var(--red);
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.6rem;
+}
+
+.feat-description {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+.feat-arrow {
+  position: absolute;
+  bottom: 1.2rem;
+  right: 1.2rem;
+  color: var(--red);
+  font-size: 1.1rem;
+  opacity: 0;
+  transform: translateX(-8px);
+  transition: opacity 0.2s, transform 0.2s;
+}
+.feat-card:hover .feat-arrow { opacity: 1; transform: translateX(0); }
+
+/* ── Loading state ── */
+.loading-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(10,10,10,0.85);
+  z-index: 100;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.loading-overlay.visible { display: flex; }
+
+.spinner {
+  width: 48px;
+  height: 48px;
+  border: 3px solid var(--surface-3);
+  border-top-color: var(--red);
+  border-right-color: var(--gold);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+.loading-text {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+}
+
+/* ============================================================
+   RANKING PAGE
+   ============================================================ */
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+  text-decoration: none;
+  margin-bottom: 2rem;
+  margin-top: 1.5rem;
+}
+.back-btn:hover { border-color: var(--red); color: var(--text); }
+
+.ranking-header {
+  margin-bottom: 2rem;
+  opacity: 0;
+  animation: fadeUp 0.5s ease forwards 0.15s;
+}
+.ranking-header .feat-icon-lg { font-size: 2.8rem; margin-bottom: 0.5rem; display: block; }
+.ranking-header h1 { font-size: clamp(2rem, 6vw, 3.5rem); }
+.ranking-header .subtitle {
+  color: var(--red);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-top: 0.3rem;
+}
+
+/* ── Source badge ── */
+.source-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.3rem 0.75rem;
+  border-radius: 100px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  margin-top: 0.75rem;
+  letter-spacing: 0.06em;
+}
+.source-badge.live {
+  background: rgba(0, 220, 100, 0.12);
+  border: 1px solid rgba(0, 220, 100, 0.3);
+  color: #00dc64;
+}
+.source-badge.mock {
+  background: rgba(255, 184, 28, 0.1);
+  border: 1px solid rgba(255, 184, 28, 0.3);
+  color: var(--gold);
+}
+.source-badge .dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* ── Ranking list ── */
+.ranking-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding-bottom: 3rem;
+}
+
+.ranking-item {
+  display: grid;
+  grid-template-columns: 52px 1fr auto;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  border-radius: 8px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.ranking-item:hover {
+  border-color: rgba(255,255,255,0.15);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+}
+
+/* #1 position — gold highlight */
+.ranking-item.rank-first {
+  background: linear-gradient(135deg, rgba(255,184,28,0.12) 0%, var(--surface) 60%);
+  border-color: rgba(255,184,28,0.4);
+  box-shadow: 0 0 24px rgba(255,184,28,0.15);
+}
+
+/* Rodman entry */
+.ranking-item.is-rodman {
+  background: linear-gradient(135deg, rgba(206,17,65,0.15) 0%, var(--surface) 60%);
+  border-color: rgba(206,17,65,0.5);
+  box-shadow: 0 0 24px var(--red-glow);
+}
+
+/* Both at once (Rodman at #1) */
+.ranking-item.rank-first.is-rodman {
+  background: linear-gradient(135deg, rgba(255,184,28,0.2) 0%, rgba(206,17,65,0.12) 100%);
+  border-color: var(--gold);
+  box-shadow: 0 0 32px var(--gold-glow);
+}
+
+.rank-number {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  color: var(--text-muted);
+  text-align: center;
+  line-height: 1;
+}
+.rank-first .rank-number {
+  color: var(--gold);
+  text-shadow: 0 0 20px var(--gold-glow);
+}
+.is-rodman:not(.rank-first) .rank-number { color: var(--red); }
+
+.player-info { min-width: 0; }
+.player-name {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.player-team {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 0.1rem;
+}
+
+.player-value {
+  text-align: right;
+  font-family: var(--font-mono);
+}
+.value-number {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text);
+}
+.rank-first .value-number { color: var(--gold); }
+.is-rodman:not(.rank-first) .value-number { color: var(--red); }
+
+.value-unit {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  display: block;
+  margin-top: 0.1rem;
+}
+
+/* ── The Worm Badge ── */
+.worm-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: rgba(0, 255, 157, 0.1);
+  border: 1px solid rgba(0, 255, 157, 0.4);
+  color: var(--worm-badge);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  padding: 0.2rem 0.55rem;
+  border-radius: 100px;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+  text-transform: uppercase;
+  animation: wormPulse 2s ease-in-out infinite;
+}
+
+/* ── Error state ── */
+.error-state {
+  text-align: center;
+  padding: 4rem 1rem;
+  color: var(--text-muted);
+}
+.error-state .error-icon { font-size: 3rem; margin-bottom: 1rem; }
+.error-state h3 { font-size: 1.4rem; margin-bottom: 0.5rem; color: var(--text); }
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 1.5rem;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+}
+.site-footer span { color: var(--red); }
+
+/* ============================================================
+   ANIMATIONS
+   ============================================================ */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.4; }
+}
+
+@keyframes wormPulse {
+  0%, 100% { box-shadow: 0 0 6px rgba(0,255,157,0.2); }
+  50%       { box-shadow: 0 0 16px rgba(0,255,157,0.5); }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-20px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* ── Stagger cards on index ── */
+.feat-card:nth-child(1) { animation-delay: 0.85s; }
+.feat-card:nth-child(2) { animation-delay: 0.95s; }
+.feat-card:nth-child(3) { animation-delay: 1.05s; }
+.feat-card:nth-child(4) { animation-delay: 1.15s; }
+.feat-card:nth-child(5) { animation-delay: 1.25s; }
+
+/* ── Stagger ranking items ── */
+.ranking-item.visible {
+  animation: slideInLeft 0.4s ease forwards;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 600px) {
+  .rodman-strip { gap: 0.6rem; }
+  .rodman-photo, .rodman-photo-placeholder { width: 90px; height: 120px; }
+  .feats-grid { grid-template-columns: 1fr; }
+  .ranking-item { grid-template-columns: 40px 1fr auto; gap: 0.75rem; padding: 0.85rem 1rem; }
+  .player-name { font-size: 1.1rem; }
+  .rank-number { font-size: 1.5rem; }
+}

@@ -1,0 +1,14 @@
+{
+  "ranking": [
+    { "player": "Wilt Chamberlain",   "team": "LAL", "value": 23924, "is_rodman": false },
+    { "player": "Bill Russell",        "team": "BOS", "value": 21620, "is_rodman": false },
+    { "player": "Kareem Abdul-Jabbar", "team": "LAL", "value": 17440, "is_rodman": false },
+    { "player": "Elvin Hayes",         "team": "WAS", "value": 16279, "is_rodman": false },
+    { "player": "Moses Malone",        "team": "HOU", "value": 16212, "is_rodman": false },
+    { "player": "Dennis Rodman",       "team": "CHI", "value": 11954, "is_rodman": true  },
+    { "player": "Robert Parish",       "team": "BOS", "value": 14715, "is_rodman": false },
+    { "player": "Nate Thurmond",       "team": "GSW", "value": 14464, "is_rodman": false },
+    { "player": "Walt Bellamy",        "team": "ATL", "value": 14241, "is_rodman": false },
+    { "player": "Wes Unseld",          "team": "WAS", "value": 13769, "is_rodman": false }
+  ]
+}

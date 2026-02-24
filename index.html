@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rodman Historic Feats</title>
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏀</text></svg>" />
+</head>
+<body>
+
+  <!-- ── Header ── -->
+  <header class="site-header">
+    <div class="container">
+      <p class="header-eyebrow">NBA ✦ Chicago Bulls ✦ 1991 – 1998</p>
+      <h1 class="header-title">RODMAN<br><span>HISTORIC</span><br>FEATS</h1>
+      <p class="header-sub">
+        The numbers behind the most electrifying, chaotic, and unstoppable force the NBA has ever seen.
+      </p>
+
+      <!-- Photo strip (public domain / placeholder) -->
+      <div class="rodman-strip">
+        <div class="rodman-photo-placeholder" title="Dennis Rodman #91">🏀</div>
+        <div class="rodman-photo-placeholder" title="Dennis Rodman — The Worm">🐛</div>
+        <div class="rodman-photo-placeholder" title="Dennis Rodman — Chicago Bulls">🐂</div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="feats-intro">
+        <h2>Choose a Historic Feat</h2>
+        <p>Click any card to see where The Worm stands in the all-time rankings.</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── Feat Cards ── -->
+  <main class="container">
+    <div class="feats-grid" id="featsGrid">
+      <!-- Cards injected by app.js -->
+    </div>
+  </main>
+
+  <!-- ── Loading overlay ── -->
+  <div class="loading-overlay" id="loadingOverlay">
+    <div class="spinner"></div>
+    <p class="loading-text">QUERYING THE ARCHIVES...</p>
+  </div>
+
+  <!-- ── Footer ── -->
+  <footer class="site-footer">
+    <p>Rodman Historic Feats ✦ Built as an AI dev demo ✦ Stats: <span>nba_api</span> + Basketball-Reference</p>
+  </footer>
+
+  <script src="/app.js"></script>
+</body>
+</html>

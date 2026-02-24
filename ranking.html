@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ranking — Rodman Historic Feats</title>
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏆</text></svg>" />
+</head>
+<body>
+
+  <!-- ── Loading overlay ── -->
+  <div class="loading-overlay" id="loadingOverlay">
+    <div class="spinner"></div>
+    <p class="loading-text">PULLING FROM THE ARCHIVES...</p>
+  </div>
+
+  <main class="container">
+    <!-- Back button -->
+    <a href="/" class="back-btn" id="backBtn">← All Feats</a>
+
+    <!-- ── Ranking header (populated by JS) ── -->
+    <div class="ranking-header" id="rankingHeader">
+      <!-- Injected by app.js -->
+    </div>
+
+    <!-- ── Divider ── -->
+    <div class="divider"></div>
+
+    <!-- ── Ranking list ── -->
+    <div class="ranking-list" id="rankingList">
+      <!-- Injected by app.js -->
+    </div>
+
+    <!-- ── Error state ── -->
+    <div class="error-state" id="errorState" style="display:none;">
+      <div class="error-icon">⚠️</div>
+      <h3>Could Not Load Ranking</h3>
+      <p>The backend might not be running. Start it with:<br>
+         <code style="color:var(--red);">uvicorn app:app --port 8000 --reload</code>
+      </p>
+    </div>
+  </main>
+
+  <!-- ── Footer ── -->
+  <footer class="site-footer">
+    <p>Rodman Historic Feats ✦ Built as an AI dev demo ✦ Stats: <span>nba_api</span> + Basketball-Reference</p>
+  </footer>
+
+  <script src="/app.js"></script>
+</body>
+</html>
